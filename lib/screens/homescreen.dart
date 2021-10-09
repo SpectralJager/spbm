@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -6,22 +7,21 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        endDrawer: Drawer(),
         appBar: AppBar(
           title: Text("SpectrumBM: Home"),
           centerTitle: true,
+          backgroundColor: Colors.red[600],
         ),
         body: Column(
           children: [
             Container(
               child: Card(
                 child: Center(
-                  child: Text(
-                    "Day performance/time spend",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: SfCircularChart(),
                 ),
-                color: Colors.black38,
               ),
+              color: Colors.black38,
               width: double.infinity,
               height: 200,
             ),
